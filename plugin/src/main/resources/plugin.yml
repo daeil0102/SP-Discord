@@ -1,6 +1,6 @@
 name: SP-Discord
 version: '${version}'
-main: SP
+main: net.teujaem.spDiscord.SPDiscord
 api-version: '${spigot_api_version}'
 libraries:
-  - com.fasterxml.jackson.core:jackson-core:2.20.1
+  - net.dv8tion:JDA:6.6.0
