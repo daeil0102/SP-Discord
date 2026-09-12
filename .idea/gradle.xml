@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/JDALib" />
+            <option value="$PROJECT_DIR$/plugin" />
             <option value="$PROJECT_DIR$/proxy" />
           </set>
         </option>

@@ -1,0 +1,6 @@
+name: SP-Discord
+version: '${version}'
+main: SP
+api-version: '${spigot_api_version}'
+libraries:
+  - com.fasterxml.jackson.core:jackson-core:2.20.1

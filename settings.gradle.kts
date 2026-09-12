@@ -1,3 +1,2 @@
 rootProject.name = "SP-Discord"
-include("proxy")
-include("JDALib")
+include("JDALib", "proxy", "plugin")
