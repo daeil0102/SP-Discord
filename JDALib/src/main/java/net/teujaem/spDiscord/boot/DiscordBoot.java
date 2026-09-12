@@ -7,7 +7,7 @@ import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.entities.channel.middleman.GuildMessageChannel;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.teujaem.spDiscord.event.DiscordMessageEvent;
-import net.teujaem.spDiscord.lisener.DiscordListener;
+import net.teujaem.spDiscord.listener.DiscordListener;
 import net.teujaem.spDiscord.model.DiscordModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,6 +82,22 @@ public class DiscordBoot {
             logger.warn(
                     "콘솔 채널을 찾을 수 없습니다! (ID: {})",
                     discordModel.getConsoleChannelId()
+            );
+        }
+    }
+
+    public void sendChatMessage(String message) {
+        if (jda == null) return;
+
+        TextChannel consoleChannel =
+                jda.getTextChannelById(discordModel.getChatChannelId());
+
+        if (consoleChannel != null) {
+            consoleChannel.sendMessage(message).queue();
+        } else {
+            logger.warn(
+                    "채팅 채널을 찾을 수 없습니다! (ID: {})",
+                    discordModel.getChatChannelId()
             );
         }
     }

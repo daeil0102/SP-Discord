@@ -8,7 +8,9 @@ import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.velocitypowered.api.proxy.ProxyServer;
 import net.teujaem.spDiscord.config.ConfigManager;
 import net.teujaem.spDiscord.config.LoadConfig;
+import net.teujaem.spDiscord.listener.DiscordChatListener;
 import net.teujaem.spDiscord.model.DiscordModel;
+import net.teujaem.spFramework.SPFramework;
 import org.slf4j.Logger;
 
 import java.nio.file.Path;
@@ -61,6 +63,7 @@ public class SPDiscord {
         discordModel.setConsoleChannelId(configManager.getConsoleChannelId());
 
         discord = new Discord(discordModel);
+        discord.addMessageEvent(new DiscordChatListener());
         discord.start();
 
         logger.info("SP-Discord가 시작되었습니다.");

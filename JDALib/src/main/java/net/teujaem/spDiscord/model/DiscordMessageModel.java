@@ -4,6 +4,7 @@ public class DiscordMessageModel {
 
     private String message;
     private String channel;
+    private String userName;
 
     public String getMessage() {
         return message;
@@ -19,5 +20,13 @@ public class DiscordMessageModel {
 
     public void setChannel(String channel) {
         this.channel = channel;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

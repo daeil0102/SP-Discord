@@ -1,4 +1,4 @@
-package net.teujaem.spDiscord.lisener;
+package net.teujaem.spDiscord.listener;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -20,6 +20,7 @@ public class DiscordListener extends ListenerAdapter {
         DiscordMessageModel model = new DiscordMessageModel();
         model.setMessage(event.getMessage().getContentRaw());
         model.setChannel(event.getChannel().getId());
+        model.setUserName(event.getAuthor().getEffectiveName());
 
         discordMessageEvent.onMessage(model);
 
