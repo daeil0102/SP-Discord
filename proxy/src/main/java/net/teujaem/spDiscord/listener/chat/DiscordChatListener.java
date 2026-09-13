@@ -1,4 +1,4 @@
-package net.teujaem.spDiscord.listener;
+package net.teujaem.spDiscord.listener.chat;
 
 import net.teujaem.spDiscord.SPDiscord;
 import net.teujaem.spDiscord.event.DiscordMessageEvent;

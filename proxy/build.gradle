@@ -26,7 +26,7 @@ dependencies {
     compileOnly("com.velocitypowered:velocity-api:${velocity_version}")
     annotationProcessor("com.velocitypowered:velocity-api:${velocity_version}")
     shadow(project(":JDALib"))
-    compileOnly(files("../libs/SP-Framework-1.0.0-proxy.jar"))
+    compileOnly(files("libs/SP-Framework-1.0.0-proxy.jar"))
 }
 
 tasks {

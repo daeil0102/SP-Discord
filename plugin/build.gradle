@@ -23,7 +23,7 @@ repositories {
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21.11-R0.1-SNAPSHOT")
     shadow(project(":JDALib"))
-    compileOnly(files("../libs/SP-Framework-1.0.0-proxy.jar"))
+    compileOnly(files("libs/SP-Framework-1.0.0-plugin-base.jar"))
 }
 
 tasks {
