@@ -13,6 +13,8 @@ import net.teujaem.spDiscord.listener.chat.DiscordChatListener;
 import net.teujaem.spDiscord.listener.chat.MCChatListener;
 import net.teujaem.spDiscord.listener.console.DiscordConsoleListener;
 import net.teujaem.spDiscord.listener.console.MCConsoleListener;
+import net.teujaem.spDiscord.listener.player.JoinListener;
+import net.teujaem.spDiscord.listener.player.QuitListener;
 import net.teujaem.spDiscord.model.DiscordModel;
 import org.slf4j.Logger;
 
@@ -77,6 +79,8 @@ public class SPDiscord {
 
         server.getEventManager().register(this, new MCChatListener(this));
         server.getEventManager().register(this, new MCConsoleListener(this));
+        server.getEventManager().register(this, new JoinListener(this));
+        server.getEventManager().register(this, new QuitListener(this));
 
     }
 
